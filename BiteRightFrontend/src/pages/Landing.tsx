@@ -136,7 +136,7 @@ export default function Landing() {
             </div>
             <div className="relative h-[450px]">
               <img
-                src="/src/assets/plan.png"
+                src="./plan.png"
                 alt="BiteRight app interface"
                 className="rounded-lg shadow-lg object-fill w-full h-full"
               />
