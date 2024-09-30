@@ -13,6 +13,7 @@ export default function Landing() {
     // Handle email submission here
     console.log('Submitted email:', email)
     setEmail('')
+
   }
 
   const fadeInUp = {
@@ -151,7 +152,7 @@ export default function Landing() {
             Join BiteRight today and transform your grocery shopping experience. Say goodbye to forgotten ingredients and hello to effortless meal preparation.
           </p>
           <Button size="lg">
-            Get Started Now <ArrowRight className="ml-2 w-5 h-5" />
+            <a href="/plan" className="h-10 px-4 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">View Example <ArrowRight className="ml-2 w-5 h-5" /></a>
           </Button>
         </motion.section>
       </main>
@@ -186,9 +187,7 @@ export default function Landing() {
               </ul>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-secondary-foreground/10 text-center">
-            <p>&copy; {new Date().getFullYear()} BiteRight. All rights reserved.</p>
-          </div>
+          
         </div>
       </footer>
     </div>
