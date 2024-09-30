@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, Check, ChefHat, ListChecks, MapPin, ShoppingCart } from 'lucide-react'
+import { ArrowRight, ChefHat, ListChecks, MapPin, ShoppingCart } from 'lucide-react'
 
 export default function Landing() {
   const [email, setEmail] = useState('')
@@ -26,13 +26,13 @@ export default function Landing() {
       <header className="container mx-auto px-4 py-6 flex justify-between items-center">
         <a href="/" className="flex items-center space-x-2">
           <ChefHat className="w-8 h-8 text-primary" />
-          <span className="text-2xl font-bold">ReciPy</span>
+          <span className="text-2xl font-bold">BiteRight</span>
         </a>
         <nav>
           <ul className="flex space-x-4">
             <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
             <li><a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a></li>
-            <li><a href="#pricing" className="hover:text-primary transition-colors">Pricing</a></li>
+            <li><a href="/plan" className="hover:text-primary transition-colors">Example</a></li>
           </ul>
         </nav>
       </header>
@@ -43,7 +43,7 @@ export default function Landing() {
             Plan Your Meals, Simplify Your Shopping
           </h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            ReciPy helps you plan delicious meals and creates smart shopping lists with ingredient locations and add-on suggestions.
+            BiteRight helps you plan delicious meals and creates smart shopping lists with ingredient locations and add-on suggestions.
           </p>
           <form onSubmit={handleSubmit} className="flex max-w-md mx-auto">
             <Input
@@ -103,12 +103,12 @@ export default function Landing() {
           <h2 className="text-3xl font-bold mb-8 text-center">How It Works</h2>
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <ol className="space-y-4">
+              <ol className="space-y-8">
                 <li className="flex items-start">
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold mr-4">1</span>
                   <div>
                     <h3 className="font-semibold mb-1">Input Your Meal</h3>
-                    <p>Tell ReciPy what you want to cook, and it will generate a complete ingredient list.</p>
+                    <p>Tell BiteRight what you want to cook, and it will generate a complete ingredient list.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -134,70 +134,21 @@ export default function Landing() {
                 </li>
               </ol>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative h-[450px]">
               <img
-                src="/placeholder.svg"
-                alt="ReciPy app interface"
-                className="rounded-lg shadow-lg object-cover w-full h-full"
+                src="/src/assets/plan.png"
+                alt="BiteRight app interface"
+                className="rounded-lg shadow-lg object-fill w-full h-full"
               />
             </div>
           </div>
         </motion.section>
 
-        <motion.section id="pricing" className="mb-16" {...fadeInUp}>
-          <h2 className="text-3xl font-bold mb-8 text-center">Simple Pricing</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>Basic</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold mb-4">Free</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> 5 meal plans per month</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Basic ingredient locations</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Limited add-on suggestions</li>
-                </ul>
-                <Button className="w-full mt-6">Get Started</Button>
-              </CardContent>
-            </Card>
-            <Card className="border-primary">
-              <CardHeader>
-                <CardTitle>Pro</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold mb-4">$9.99/mo</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Unlimited meal plans</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Detailed store navigation</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Advanced add-on suggestions</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Dietary preference filters</li>
-                </ul>
-                <Button className="w-full mt-6">Upgrade to Pro</Button>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Family</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-3xl font-bold mb-4">$19.99/mo</p>
-                <ul className="space-y-2">
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> All Pro features</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Up to 5 family members</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Shared meal planning</li>
-                  <li className="flex items-center"><Check className="w-4 h-4 mr-2 text-primary" /> Family preference management</li>
-                </ul>
-                <Button className="w-full mt-6">Choose Family Plan</Button>
-              </CardContent>
-            </Card>
-          </div>
-        </motion.section>
 
         <motion.section className="text-center" {...fadeInUp}>
           <h2 className="text-3xl font-bold mb-6">Ready to Simplify Your Meal Planning?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join ReciPy today and transform your grocery shopping experience. Say goodbye to forgotten ingredients and hello to effortless meal preparation.
+            Join BiteRight today and transform your grocery shopping experience. Say goodbye to forgotten ingredients and hello to effortless meal preparation.
           </p>
           <Button size="lg">
             Get Started Now <ArrowRight className="ml-2 w-5 h-5" />
@@ -209,7 +160,7 @@ export default function Landing() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="font-bold mb-4">ReciPy</h3>
+              <h3 className="font-bold mb-4">BiteRight</h3>
               <p>Simplifying meal planning and grocery shopping for busy people.</p>
             </div>
             <div>
@@ -217,27 +168,26 @@ export default function Landing() {
               <ul className="space-y-2">
                 <li><a href="#features" className="hover:underline">Features</a></li>
                 <li><a href="#how-it-works" className="hover:underline">How It Works</a></li>
-                <li><a href="#pricing" className="hover:underline">Pricing</a></li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="/terms" className="hover:underline">Terms of Service</a></li>
-                <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
+                <li><a href="/tos" className="hover:underline">Terms of Service</a></li>
+                <li><a href="/private-policy" className="hover:underline">Privacy Policy</a></li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold mb-4">Connect</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:underline">Twitter</a></li>
-                <li><a href="#" className="hover:underline">Facebook</a></li>
-                <li><a href="#" className="hover:underline">Instagram</a></li>
+                <li><a href="#" className="hover:underline">Social Media 1</a></li>
+                <li><a href="#" className="hover:underline">Social Media 2</a></li>
+                <li><a href="#" className="hover:underline">Social Media 3</a></li>
               </ul>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-secondary-foreground/10 text-center">
-            <p>&copy; {new Date().getFullYear()} ReciPy. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} BiteRight. All rights reserved.</p>
           </div>
         </div>
       </footer>
